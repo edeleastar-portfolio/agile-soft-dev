@@ -1,23 +1,27 @@
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+        type="text/css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+        rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <style>
     
 
@@ -63,184 +67,142 @@ h3 {
 
 
   </style>
+</head>
 
-  <body class="lab">
+<body>
 
+
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
     
-  <div class="uk-offcanvas-content">
-    <div id="offcanvas-usage" uk-offcanvas>
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <ul class="uk-nav">
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic01-paradigms-and-languages/book-eclipse-and-java/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-01 Eclipse & Java
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic02-java-language/book-cli-and-classes/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-02 CLI & Classes
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic03-inheritance-and-collections/book-objects-and-serialization/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-03 Objects & Serialization
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic04-serialisation-and-tdd-1/book-testing/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-04 Testing
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic05-tdd-2/book-refactoring/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-05 Refactoring
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic06-exceptions-and-maven/book-maven/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-06 Maven
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic07-tdd-3-and-pacemaker-solution/book-a-pacemaker-models/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-07a Pacemaker Models
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic07-tdd-3-and-pacemaker-solution/book-b-pacemaker-api/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-07b Pacemaker API
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic08-srp-and-tdd-4/book--assignmment-2-skeleton/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-08 Skeleton
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic09-ocp-and-rest/book-simple-rest-api/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-09 Rest API
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic10-lsp-and-tdd-5-and-kotlin/book-rest-cli-test/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-10 Rest CLI
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic11-isp-dip-and-kotlin/book-pacemaker-service-test/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-11 Rest Test
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic12-tdd-6/book-kotlin-pacemaker-client/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-12 Kotlin
-                </a>
-              </li>
-            
-          
-        </ul>
-      </div>
-    </div>
+      <a href="../index.html"> 6: Exceptions & Maven  </a>
+    
+  </header>
+  <div class="right tab-menu menu">
+    
+      <a class="item" data-tab="Lab-06 Maven">
+        Lab-06 Maven
+      </a>
+    
+      <a class="item" data-tab="01">
+        01
+      </a>
+    
+      <a class="item" data-tab="02">
+        02
+      </a>
+    
+      <a class="item" data-tab="03">
+        03
+      </a>
+    
+      <a class="item" data-tab="04">
+        04
+      </a>
+    
+      <a class="item" data-tab="05">
+        05
+      </a>
+    
+      <a class="item" data-tab="06">
+        06
+      </a>
+    
+      <a class="item" data-tab="JUnit5">
+        JUnit5
+      </a>
+    
+      <a class="item" data-tab="Exercises">
+        Exercises
+      </a>
+    
   </div>
+</div>
 
-
-    <div uk-sticky>
-      <nav class="uk-navbar">
-        <div class="uk-navbar-left">
-          <ul class="uk-subnav uk-background-secondary uk-subnav-pill">
-            <li><a href="#offcanvas-usage" uk-icon="icon: menu" , uk-toggle title="Switch Lab" pos="bottom"
-                   uk-tooltip></a></li>
-            <li class="uk-active"><a href="../index.html" uk-icon="icon: chevron-up" uk-toggle title="Parent Topic"
-                                     pos="bottom" uk-tooltip>6: Exceptions & Maven </a></li>
-          </ul>
-        </div>
-        <div class="uk-navbar-right">
-          <ul class="uk-subnav uk-background-secondary uk-subnav-pill"
-              uk-switcher="connect: .switcher-container">
-            
-              <li><a href="#">Lab-06 Maven</a></li>
-            
-              <li><a href="#">01</a></li>
-            
-              <li><a href="#">02</a></li>
-            
-              <li><a href="#">03</a></li>
-            
-              <li><a href="#">04</a></li>
-            
-              <li><a href="#">05</a></li>
-            
-              <li><a href="#">06</a></li>
-            
-              <li><a href="#">JUnit5</a></li>
-            
-              <li><a href="#">Exercises</a></li>
-            
-          </ul>
-        </div>
-      </nav>
-    </div>
-
-    <div class="uk-container uk-container-expand">
-      <ul class="uk-switcher switcher-container">
-        
-          <li> <h2>Objectives</h2>
+<div class="ui pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic01-paradigms-and-languages/book-eclipse-and-java/index.html">Lab-01 Eclipse & Java </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic02-java-language/book-cli-and-classes/index.html">Lab-02 CLI & Classes </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic03-inheritance-and-collections/book-objects-and-serialization/index.html">Lab-03 Objects & Serialization </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic04-serialisation-and-tdd-1/book-testing/index.html">Lab-04 Testing </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic05-tdd-2/book-refactoring/index.html">Lab-05 Refactoring </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic06-exceptions-and-maven/book-maven/index.html">Lab-06 Maven </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic07-tdd-3-and-pacemaker-solution/book-a-pacemaker-models/index.html">Lab-07a Pacemaker Models </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic07-tdd-3-and-pacemaker-solution/book-b-pacemaker-api/index.html">Lab-07b Pacemaker API </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic08-srp-and-tdd-4/book--assignmment-2-skeleton/index.html">Lab-08 Skeleton </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic09-ocp-and-rest/book-simple-rest-api/index.html">Lab-09 Rest API </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic10-lsp-and-tdd-5-and-kotlin/book-rest-cli-test/index.html">Lab-10 Rest CLI </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic11-isp-dip-and-kotlin/book-pacemaker-service-test/index.html">Lab-11 Rest Test </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic12-tdd-6/book-kotlin-pacemaker-client/index.html">Lab-12 Kotlin </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment">
+      <br>
+      
+        <div class="ui tab segment lab" data-tab="Lab-06 Maven">
+          <h2>Objectives</h2>
 <p>In the previous lab, you installed Maven.  In this lab, we will incorporate Maven into  our pacemaker-console-lab05 solution.  We will also use Maven to bring JUnit5 capabilities into Eclipse.  </p>
-</li>
-        
-          <li> <h1>Verify your Maven Installation</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="01">
+          <h1>Verify your Maven Installation</h1>
 <p>Visit the main Maven site:</p>
 <ul>
 <li><a href="http://maven.apache.org/">http://maven.apache.org/</a></li>
@@ -268,9 +230,11 @@ C:\Users\Siobhan&gt;</code></pre>
 <ul>
 <li><a href="http://maven.apache.org/install.html">http://maven.apache.org/install.html</a></li>
 </ul>
-</li>
-        
-          <li> <h1>5-minute Maven Guide</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="02">
+          <h1>5-minute Maven Guide</h1>
 <p><em>In this step, you will work through the Maven example we covered in lectures.</em></p>
 <p>Navigate to this 5 minute guide:</p>
 <ul>
@@ -282,9 +246,11 @@ C:\Users\Siobhan&gt;</code></pre>
 <ul>
 <li><a href="https://maven.apache.org/pom.html">https://maven.apache.org/pom.html</a></li>
 </ul>
-</li>
-        
-          <li> <h1>Pacemaker with Maven Project</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="03">
+          <h1>Pacemaker with Maven Project</h1>
 <h2>Review pacemaker project</h2>
 <p>You should have the pacemaker project from lab05 in your workspace.  If you don&#39;t have a lab05 pacemaker project, you can download it from here:  </p>
 <ul>
@@ -342,9 +308,11 @@ C:\Users\Siobhan&gt;</code></pre>
 <p>Within eclipse, you should be able to copy/paste all of the sources (the .java files only) into the appropriate folder in the new project. Also, delete the maven generated <strong>pacemaker</strong> packages:</p>
 <p><img src="img/004.png" alt=""></p>
 <p>There are a significant number of errors however, which we will fix in the next step.  These errors have arisen because we haven&#39;t yet included our components (e.g. XStream, Cliche, etc) in the project. We are going to get Maven to manage this for us!</p>
-</li>
-        
-          <li> <h2>Incorporate Correct Library References</h2>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="04">
+          <h2>Incorporate Correct Library References</h2>
 <p>Inspect the pacemaker-console-maven folder, open and review the &quot;pom.xml&quot; file.</p>
 <pre><code class="lang-xml">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
   xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
@@ -482,9 +450,11 @@ C:\Users\Siobhan&gt;</code></pre>
 [INFO] ------------------------------------------------------------------------
 
 C:\Users\Siobhan\Desktop\agile workspace\pacemaker-console-maven&gt;</code></pre>
-</li>
-        
-          <li> <h1>Build</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="05">
+          <h1>Build</h1>
 <h2>Attempting to compile and test</h2>
 <p>In your command prompt/shell, type in <strong>mvn test</strong>.  It will fail because maven cannot resolve the ASCII Table dependency:</p>
 <pre><code>[INFO] ------------------------------------------------------------------------
@@ -571,9 +541,11 @@ C:\Users\Siobhan\Desktop\agile workspace\pacemaker-console-maven\src\main\resour
 <h2>Run the app from the command line</h2>
 <p>To execute the application within your command prompt/shell, enter:</p>
 <pre><code>mvn exec:java -Dexec.mainClass=&quot;controllers.Main&quot;</code></pre>
-</li>
-        
-          <li> <h1>Explore the local repo and use launch scripts</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="06">
+          <h1>Explore the local repo and use launch scripts</h1>
 <h2>Local Repository</h2>
 <p>Locate the local maven repository - it should be in your <strong>home folder/.m2/repository</strong>. It contains not just dependencies explicitly downloaded as part of the project you have just constructed, but also components downloaded by maven as part of the goals you have invoked. This may include components used by maven itself.</p>
 <p>If you examine the repository, and recall the naming system we adopted for the Ascii Table component, then you can locate the generated jar file.</p>
@@ -651,9 +623,11 @@ C:\Users\Siobhan\Desktop\agile workspace\pacemaker-console-maven&gt;echo off
 Welcome to pacemaker-console - ?help for instructions
 pm&gt;</code></pre>
 <p>See above...you should expect to be presented with the pacemaker console user interface.  </p>
-</li>
-        
-          <li> <h1>Maven and JUnit5</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="JUnit5">
+          <h1>Maven and JUnit5</h1>
 <p>Eclipse Oxygen.1a (4.7.1a) comes with JUnit5 support:</p>
 <ul>
 <li><a href="https://marketplace.eclipse.org/content/junit-5-support-oxygen">https://marketplace.eclipse.org/content/junit-5-support-oxygen</a></li>
@@ -807,9 +781,11 @@ class SecondTest {
 <p>Note that the JUnit output from a JUnit5 test is different to that of a JUnit4.  In JUnit 4, the test methods are all listed below.  But in the JUnit 5 test, when all tests are successful, the test runner is listed instead, regardless of the number of test methods in the class.  </p>
 <p>Experiment with JUnit5 by adding extra methods to your JUnit5 class and also force a fail on one of these extra methods.  This will get you used to the JUnit5 functionality in Eclipse. I&#39;ve provided a sample of this experimentation appraoch here:</p>
 <p><img src="img/012.png" alt=""></p>
-</li>
-        
-          <li> <h1>Exercises</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Exercises">
+          <h1>Exercises</h1>
 <p>The complete maven project so far:</p>
 <ul>
 <li><a href="archives/pacemaker-console-maven.zip">pacemaker-console-maven.zip</a></li>
@@ -856,26 +832,67 @@ class SecondTest {
 <li>regenerate the eclipse project using &#39;mvn eclipse:eclipse&#39;</li>
 <li>refresh the project in eclipse</li>
 </ul>
-</li>
-        
-      </ul>
-    </div>
 
-    <script>
-      $(document).ready(function() {
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+  $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
   const $images = $('.lab img');
   jQuery.each($images, function(i) {
     if ($images[i].alt.length > 0) {
-      const divImg = $(document.createElement('div')).addClass('');
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('uk-label uk-text-lowercase');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
-      $(divLabel).insertAfter($images[i]);
-      $('<br>').insertAfter($images[i]);
+      $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
-  </body>
+</script>
+</body>
 </html>

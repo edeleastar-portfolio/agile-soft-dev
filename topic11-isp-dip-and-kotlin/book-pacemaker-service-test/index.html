@@ -1,23 +1,27 @@
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+        type="text/css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+        rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <style>
     
 
@@ -63,184 +67,142 @@ h3 {
 
 
   </style>
+</head>
 
-  <body class="lab">
+<body>
 
+
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
     
-  <div class="uk-offcanvas-content">
-    <div id="offcanvas-usage" uk-offcanvas>
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <ul class="uk-nav">
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic01-paradigms-and-languages/book-eclipse-and-java/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-01 Eclipse & Java
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic02-java-language/book-cli-and-classes/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-02 CLI & Classes
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic03-inheritance-and-collections/book-objects-and-serialization/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-03 Objects & Serialization
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic04-serialisation-and-tdd-1/book-testing/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-04 Testing
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic05-tdd-2/book-refactoring/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-05 Refactoring
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic06-exceptions-and-maven/book-maven/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-06 Maven
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic07-tdd-3-and-pacemaker-solution/book-a-pacemaker-models/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-07a Pacemaker Models
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic07-tdd-3-and-pacemaker-solution/book-b-pacemaker-api/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-07b Pacemaker API
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic08-srp-and-tdd-4/book--assignmment-2-skeleton/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-08 Skeleton
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic09-ocp-and-rest/book-simple-rest-api/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-09 Rest API
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic10-lsp-and-tdd-5-and-kotlin/book-rest-cli-test/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-10 Rest CLI
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic11-isp-dip-and-kotlin/book-pacemaker-service-test/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-11 Rest Test
-                </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="item" href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic12-tdd-6/book-kotlin-pacemaker-client/index.html">
-  <i class="fas fa-flask " style="color:#00BCD4"> </i>
-Lab-12 Kotlin
-                </a>
-              </li>
-            
-          
-        </ul>
-      </div>
-    </div>
+      <a href="../index.html"> 11. ISP, DSP and Kotlin  </a>
+    
+  </header>
+  <div class="right tab-menu menu">
+    
+      <a class="item" data-tab="Lab-11 Rest Test">
+        Lab-11 Rest Test
+      </a>
+    
+      <a class="item" data-tab="01">
+        01
+      </a>
+    
+      <a class="item" data-tab="02">
+        02
+      </a>
+    
+      <a class="item" data-tab="03">
+        03
+      </a>
+    
+      <a class="item" data-tab="04">
+        04
+      </a>
+    
+      <a class="item" data-tab="05">
+        05
+      </a>
+    
+      <a class="item" data-tab="06">
+        06
+      </a>
+    
+      <a class="item" data-tab="07">
+        07
+      </a>
+    
+      <a class="item" data-tab="Exercises">
+        Exercises
+      </a>
+    
   </div>
+</div>
 
-
-    <div uk-sticky>
-      <nav class="uk-navbar">
-        <div class="uk-navbar-left">
-          <ul class="uk-subnav uk-background-secondary uk-subnav-pill">
-            <li><a href="#offcanvas-usage" uk-icon="icon: menu" , uk-toggle title="Switch Lab" pos="bottom"
-                   uk-tooltip></a></li>
-            <li class="uk-active"><a href="../index.html" uk-icon="icon: chevron-up" uk-toggle title="Parent Topic"
-                                     pos="bottom" uk-tooltip>11. ISP, DSP and Kotlin </a></li>
-          </ul>
-        </div>
-        <div class="uk-navbar-right">
-          <ul class="uk-subnav uk-background-secondary uk-subnav-pill"
-              uk-switcher="connect: .switcher-container">
-            
-              <li><a href="#">Lab-11 Rest Test</a></li>
-            
-              <li><a href="#">01</a></li>
-            
-              <li><a href="#">02</a></li>
-            
-              <li><a href="#">03</a></li>
-            
-              <li><a href="#">04</a></li>
-            
-              <li><a href="#">05</a></li>
-            
-              <li><a href="#">06</a></li>
-            
-              <li><a href="#">07</a></li>
-            
-              <li><a href="#">Exercises</a></li>
-            
-          </ul>
-        </div>
-      </nav>
-    </div>
-
-    <div class="uk-container uk-container-expand">
-      <ul class="uk-switcher switcher-container">
-        
-          <li> <h1>Objectives</h1>
+<div class="ui pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic01-paradigms-and-languages/book-eclipse-and-java/index.html">Lab-01 Eclipse & Java </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic02-java-language/book-cli-and-classes/index.html">Lab-02 CLI & Classes </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic03-inheritance-and-collections/book-objects-and-serialization/index.html">Lab-03 Objects & Serialization </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic04-serialisation-and-tdd-1/book-testing/index.html">Lab-04 Testing </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic05-tdd-2/book-refactoring/index.html">Lab-05 Refactoring </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic06-exceptions-and-maven/book-maven/index.html">Lab-06 Maven </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic07-tdd-3-and-pacemaker-solution/book-a-pacemaker-models/index.html">Lab-07a Pacemaker Models </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic07-tdd-3-and-pacemaker-solution/book-b-pacemaker-api/index.html">Lab-07b Pacemaker API </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic08-srp-and-tdd-4/book--assignmment-2-skeleton/index.html">Lab-08 Skeleton </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic09-ocp-and-rest/book-simple-rest-api/index.html">Lab-09 Rest API </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic10-lsp-and-tdd-5-and-kotlin/book-rest-cli-test/index.html">Lab-10 Rest CLI </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic11-isp-dip-and-kotlin/book-pacemaker-service-test/index.html">Lab-11 Rest Test </a>
+      
+    
+      
+        <a class="item"
+           href="https://edeleastar-portfolio.github.io/agile-soft-dev//topic12-tdd-6/book-kotlin-pacemaker-client/index.html">Lab-12 Kotlin </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment">
+      <br>
+      
+        <div class="ui tab segment lab" data-tab="Lab-11 Rest Test">
+          <h1>Objectives</h1>
 <p>Complete the API + write a range of unit tests to exercises the features. Deploy the service to the cloud.</p>
-</li>
-        
-          <li> <h1>Exercise Solutions</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="01">
+          <h1>Exercise Solutions</h1>
 <ul>
 <li><a href="https://github.com/wit-computing-msc-2017/pacemaker-skeleton-client/releases/tag/lab10.exercises">https://github.com/wit-computing-msc-2017/pacemaker-skeleton-client/releases/tag/lab10.exercises</a></li>
 </ul>
@@ -303,9 +265,11 @@ Lab-12 Kotlin
       console.println(&quot;not found&quot;);
     }
   }</code></pre>
-</li>
-        
-          <li> <h1>User Endpoints</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="02">
+          <h1>User Endpoints</h1>
 <p>Implement the remaining user endpoints:</p>
 <pre><code>GET    /user/:id
 DELETE /users
@@ -382,9 +346,11 @@ DELETE /users/:id</code></pre>
     return user;
   }</code></pre>
 <p>We will tests these endpoints in the following steps.</p>
-</li>
-        
-          <li> <h1>User Tests</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="03">
+          <h1>User Tests</h1>
 <p>In <strong>pacemaker-skeleton-client</strong>, we can now proceed to implement some initial tests.</p>
 <p>In the test folder, create two packages:  <strong>models</strong> and <strong>controllers</strong>. </p>
 <p>In the <strong>models</strong> package, we can start by bringing over some fixtures:</p>
@@ -472,9 +438,11 @@ public class UserTest {
 }</code></pre>
 <p>Remember - you must first run pacemaker-skeleton before running these tests. If these tests fail, it could be because you have previously added users to your current app session via the RESTLET client.  If this is the case, terminate the pacemaker-skeleton session, restart it and try the tests again.  They should pass. </p>
 <p>Notice that <code>setup()</code> deletes all users before each test. Commenting this out will cause one of the tests to fail. Can you see why?</p>
-</li>
-        
-          <li> <h1>Create Activity Test</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="04">
+          <h1>Create Activity Test</h1>
 <p>We can now compose this new unit test to exercise the activity endpoint:</p>
 <pre><code>package controllers;
 
@@ -554,9 +522,11 @@ This is clearly missing the initialisation of the distance attribute:
 Make this change, restart the service, and verify that the tests passes.
 -->
 
-</li>
-        
-          <li> <h1>Get and Delete Activity tests</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="05">
+          <h1>Get and Delete Activity tests</h1>
 <p>Currently we might say that the <code>activities</code> endpoint is not quite testable yet - until we implement some way of removing activities. We will implement an API to remove all activities for a given user, and then write some tests to exercise this new feature.</p>
 <p>First - start with the server:</p>
 <h1>pacemaker-skeleton</h1>
@@ -621,9 +591,11 @@ Make this change, restart the service, and verify that the tests passes.
 <pre><code>    app.get(&quot;/users/:id/activities/:activityId&quot;, ctx -&gt; {
       service.getActivity(ctx);
     });</code></pre>
-</li>
-        
-          <li> <h1>Deployment Preparation</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="06">
+          <h1>Deployment Preparation</h1>
 <p>In order to deploy pacemaker-skeleton we need to make some small modifications to the the pacemaker-skeleton project</p>
 <h1>RestMain</h1>
 <p>First, introduce a new method into the RestMain class:</p>
@@ -697,9 +669,11 @@ mvn package</code></pre>
 <li>pacemaker-skeleton-1.0-jar-with-dependencies.jar</li>
 </ul>
 <p>This is a compiled version of our application, containing all dependencies. This is the artifact that will be deployed to the cloud (in the next step).</p>
-</li>
-        
-          <li> <h2>Heroku</h2>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="07">
+          <h2>Heroku</h2>
 <p>We will use the Heroku provider. Create a free account on the service now:</p>
 <ul>
 <li><a href="https://www.heroku.com/">https://www.heroku.com/</a></li>
@@ -775,9 +749,11 @@ https://fierce-brook-96934.herokuapp.com/ | https://git.heroku.com/fierce-brook-
 <pre><code>heroku logs --tail</code></pre>
 <p>This will reveal the console, more or less as you would have seen it in Eclipse when running locally:</p>
 <p><img src="img/03.png" alt=""></p>
-</li>
-        
-          <li> <h1>Exercises</h1>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Exercises">
+          <h1>Exercises</h1>
 <p>Project Archives at this stage:</p>
 <ul>
 <li><a href="https://github.com/wit-computing-msc-2017/pacemaker-skeleton/releases/tag/lab11.end">https://github.com/wit-computing-msc-2017/pacemaker-skeleton/releases/tag/lab11.end</a></li>
@@ -803,26 +779,67 @@ https://fierce-brook-96934.herokuapp.com/ | https://git.heroku.com/fierce-brook-
 <p>Explore the deployed service using the Restlet Chrome plugin</p>
 <h2>Exercise 4:</h2>
 <p>Evolve a set of tests to verify that locations can be added to activities.</p>
-</li>
-        
-      </ul>
-    </div>
 
-    <script>
-      $(document).ready(function() {
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+  $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
   const $images = $('.lab img');
   jQuery.each($images, function(i) {
     if ($images[i].alt.length > 0) {
-      const divImg = $(document.createElement('div')).addClass('');
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('uk-label uk-text-lowercase');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
-      $(divLabel).insertAfter($images[i]);
-      $('<br>').insertAfter($images[i]);
+      $(divLabel).insertBefore($images[i]);
     }
   });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
-  </body>
+</script>
+</body>
 </html>
